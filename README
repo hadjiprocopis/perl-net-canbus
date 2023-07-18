@@ -1,0 +1,67 @@
+Net-CANbus
+
+The Net::CANbus module provides an XS wrapper around
+"can-utils" C library which interacts with the CANbus.
+
+can-utils are located here:
+
+   https://github.com/linux-can/can-utils
+
+Kudos and all rights reserved for "can-utils".
+I don't claim their code, I am just using it.
+
+DEVICE CONFIGURATION IN LINUX
+This article explains it very well:
+  https://en.wikipedia.org/wiki/SocketCAN
+
+To test this code it is sufficient to create a
+virtucal CAN interface. Copying from the above page:
+
+ modprobe can
+ modprobe can_raw
+ modprobe vcan
+ sudo ip link add dev vcan0 type vcan
+ sudo ip link set up vcan0
+ ip link show vcan0
+
+And if all goes well you should be able to see the vcan0 interface:
+
+    vcan0: <NOARP,UP,LOWER_UP> mtu 72 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
+         link/can 
+
+INSTALLATION
+
+To install this module, run the following commands:
+
+	perl Makefile.PL
+	make
+	make test
+	make install
+
+SUPPORT AND DOCUMENTATION
+
+After installing, you can find documentation for this module with the
+perldoc command.
+
+    perldoc Net::CANbus
+
+You can also look for information at:
+
+    RT, CPAN's request tracker (report bugs here)
+        https://rt.cpan.org/NoAuth/Bugs.html?Dist=Net-CANbus
+
+    CPAN Ratings
+        https://cpanratings.perl.org/d/Net-CANbus
+
+    Search CPAN
+        https://metacpan.org/release/Net-CANbus
+
+
+LICENSE AND COPYRIGHT
+
+This software is Copyright (c) 2023 by Andreas Hadjiprocopis.
+
+This is free software, licensed under:
+
+  The Artistic License 2.0 (GPL Compatible)
+
