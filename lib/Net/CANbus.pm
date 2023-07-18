@@ -84,8 +84,6 @@ the web interface at L<https://rt.cpan.org/NoAuth/ReportBug.html?Queue=Net-CANbu
 automatically be notified of progress on your bug as I make changes.
 
 
-
-
 =head1 SUPPORT
 
 You can find documentation for this module with the perldoc command.
@@ -113,6 +111,14 @@ L<https://metacpan.org/release/Net-CANbus>
 
 
 =head1 ACKNOWLEDGEMENTS
+
+
+https://github.com/linux-can/can-utils
+
+
+=head1 INFORMATION
+
+L<https://en.wikipedia.org/wiki/SocketCAN>
 
 
 =head1 LICENSE AND COPYRIGHT

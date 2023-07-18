@@ -70,6 +70,12 @@ You can also look for information at:
 
 # ACKNOWLEDGEMENTS
 
+https://github.com/linux-can/can-utils
+
+# INFORMATION
+
+[https://en.wikipedia.org/wiki/SocketCAN](https://en.wikipedia.org/wiki/SocketCAN)
+
 # LICENSE AND COPYRIGHT
 
 This software is Copyright (c) 2023 by Andreas Hadjiprocopis.
