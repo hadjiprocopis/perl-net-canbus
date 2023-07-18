@@ -70,7 +70,7 @@ You can also look for information at:
 
 # ACKNOWLEDGEMENTS
 
-https://github.com/linux-can/can-utils
+[https://github.com/linux-can/can-utils](https://github.com/linux-can/can-utils)
 
 # INFORMATION
 
@@ -78,8 +78,13 @@ https://github.com/linux-can/can-utils
 
 # LICENSE AND COPYRIGHT
 
-This software is Copyright (c) 2023 by Andreas Hadjiprocopis.
+This software (Perl and XS code)
+is Copyright (c) 2023 by Andreas Hadjiprocopis.
 
 This is free software, licensed under:
 
     The Artistic License 2.0 (GPL Compatible)
+
+For can-utils license see
+
+[https://github.com/linux-can/can-utils](https://github.com/linux-can/can-utils)

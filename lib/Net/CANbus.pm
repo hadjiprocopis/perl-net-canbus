@@ -113,7 +113,7 @@ L<https://metacpan.org/release/Net-CANbus>
 =head1 ACKNOWLEDGEMENTS
 
 
-https://github.com/linux-can/can-utils
+L<https://github.com/linux-can/can-utils>
 
 
 =head1 INFORMATION
@@ -123,11 +123,16 @@ L<https://en.wikipedia.org/wiki/SocketCAN>
 
 =head1 LICENSE AND COPYRIGHT
 
-This software is Copyright (c) 2023 by Andreas Hadjiprocopis.
+This software (Perl and XS code)
+is Copyright (c) 2023 by Andreas Hadjiprocopis.
 
 This is free software, licensed under:
 
   The Artistic License 2.0 (GPL Compatible)
+
+For can-utils license see
+
+L<https://github.com/linux-can/can-utils>
 
 
 =cut
