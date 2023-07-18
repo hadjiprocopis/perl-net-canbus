@@ -1,67 +1,78 @@
-Net-CANbus
+NAME
 
-The Net::CANbus module provides an XS wrapper around
-"can-utils" C library which interacts with the CANbus.
+    Net::CANbus - Perl wrapper for sending data to the CANbus using
+    can-utils
 
-can-utils are located here:
+VERSION
 
-   https://github.com/linux-can/can-utils
+    Version 0.01
 
-Kudos and all rights reserved for "can-utils".
-I don't claim their code, I am just using it.
+SYNOPSIS
 
-DEVICE CONFIGURATION IN LINUX
-This article explains it very well:
-  https://en.wikipedia.org/wiki/SocketCAN
+        use Net::CANbus qw/CANsend CANsend_xs/;
+    
+        my $rc = CANsend($deviceid, $canframe);
+        die "failed with return code $rc" unless $rc == 0;
+        ...
 
-To test this code it is sufficient to create a
-virtucal CAN interface. Copying from the above page:
+EXPORT
 
- modprobe can
- modprobe can_raw
- modprobe vcan
- sudo ip link add dev vcan0 type vcan
- sudo ip link set up vcan0
- ip link show vcan0
+SUBROUTINES/METHODS
 
-And if all goes well you should be able to see the vcan0 interface:
+ CANsend($deviceid, $canframe)
 
-    vcan0: <NOARP,UP,LOWER_UP> mtu 72 qdisc noqueue state UNKNOWN mode DEFAULT group default qlen 1000
-         link/can 
+    It sends `$canframe` data to the CANbus interface identified by
+    `$deviceid`. Internally it calls CANsend_xs which you can use directly.
 
-INSTALLATION
+    It returns 0 on success or 1 on error.
 
-To install this module, run the following commands:
+ CANsend_xs($deviceid, $canframe)
 
-	perl Makefile.PL
-	make
-	make test
-	make install
+    It sends `$canframe` data to the CANbus interface identified by
+    `$deviceid`. Internally it calls cansend() which is implemented by
+    can-utils (see https://github.com/linux-can/can-utils)
 
-SUPPORT AND DOCUMENTATION
+    It returns 0 on success or 1 on error.
 
-After installing, you can find documentation for this module with the
-perldoc command.
+AUTHOR
 
-    perldoc Net::CANbus
+    Andreas Hadjiprocopis, <bliako at cpan.org>
 
-You can also look for information at:
+BUGS
 
-    RT, CPAN's request tracker (report bugs here)
-        https://rt.cpan.org/NoAuth/Bugs.html?Dist=Net-CANbus
+    Please report any bugs or feature requests to bug-net-canbus at
+    rt.cpan.org, or through the web interface at
+    https://rt.cpan.org/NoAuth/ReportBug.html?Queue=Net-CANbus. I will be
+    notified, and then you'll automatically be notified of progress on your
+    bug as I make changes.
 
-    CPAN Ratings
-        https://cpanratings.perl.org/d/Net-CANbus
+SUPPORT
 
-    Search CPAN
-        https://metacpan.org/release/Net-CANbus
+    You can find documentation for this module with the perldoc command.
 
+        perldoc Net::CANbus
+
+    You can also look for information at:
+
+      * RT: CPAN's request tracker (report bugs here)
+
+      https://rt.cpan.org/NoAuth/Bugs.html?Dist=Net-CANbus
+
+      * CPAN Ratings
+
+      https://cpanratings.perl.org/d/Net-CANbus
+
+      * Search CPAN
+
+      https://metacpan.org/release/Net-CANbus
+
+ACKNOWLEDGEMENTS
 
 LICENSE AND COPYRIGHT
 
-This software is Copyright (c) 2023 by Andreas Hadjiprocopis.
+    This software is Copyright (c) 2023 by Andreas Hadjiprocopis.
 
-This is free software, licensed under:
+    This is free software, licensed under:
 
-  The Artistic License 2.0 (GPL Compatible)
+      The Artistic License 2.0 (GPL Compatible)
 

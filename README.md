@@ -1,6 +1,6 @@
 # NAME
 
-Net::CANbus - The great new Net::CANbus!
+Net::CANbus - Perl wrapper for sending data to the CANbus using can-utils
 
 # VERSION
 
@@ -8,24 +8,33 @@ Version 0.01
 
 # SYNOPSIS
 
-Quick summary of what the module does.
+    use Net::CANbus qw/CANsend CANsend_xs/;
 
-Perhaps a little code snippet.
-
-    use Net::CANbus;
-
-    my $rc = Net::CANbus::CANsend($deviceid, $canframe);
+    my $rc = CANsend($deviceid, $canframe);
     die "failed with return code $rc" unless $rc == 0;
     ...
 
 # EXPORT
 
-A list of functions that can be exported.  You can delete this section
-if you don't export anything, such as for a purely object-oriented module.
-
 # SUBROUTINES/METHODS
 
-## cansend
+## CANsend($deviceid, $canframe)
+
+It sends \`$canframe\` data to the CANbus
+interface identified by \`$deviceid\`.
+Internally it calls [CANsend\_xs](https://metacpan.org/pod/CANsend_xs)
+which you can use directly.
+
+It returns 0 on success or 1 on error.
+
+## CANsend\_xs($deviceid, $canframe)
+
+It sends \`$canframe\` data to the CANbus
+interface identified by \`$deviceid\`.
+Internally it calls cansend() which is
+implemented by can-utils (see [https://github.com/linux-can/can-utils](https://github.com/linux-can/can-utils))
+
+It returns 0 on success or 1 on error.
 
 # AUTHOR
 

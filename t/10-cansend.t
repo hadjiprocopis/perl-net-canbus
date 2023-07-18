@@ -4,6 +4,8 @@ use strict;
 use warnings;
 use Test::More;
 
+our $VERSION = '0.01';
+
 use Net::CANbus qw/CANsend_xs CANsend/;
 
 my $deviceid = 'vcan0';
