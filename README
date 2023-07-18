@@ -36,7 +36,9 @@ SUBROUTINES/METHODS
 
 AUTHOR
 
-    Andreas Hadjiprocopis, <bliako at cpan.org>
+    Perl and XS code by Andreas Hadjiprocopis, <bliako at cpan.org>
+
+    can-utils code by https://github.com/linux-can/can-utils
 
 BUGS
 

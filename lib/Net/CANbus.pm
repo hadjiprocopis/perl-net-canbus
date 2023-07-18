@@ -72,7 +72,10 @@ It returns 0 on success or 1 on error.
 
 =head1 AUTHOR
 
-Andreas Hadjiprocopis, C<< <bliako at cpan.org> >>
+Perl and XS code by Andreas Hadjiprocopis, C<< <bliako at cpan.org> >>
+
+can-utils code by L<https://github.com/linux-can/can-utils>
+
 
 =head1 BUGS
 

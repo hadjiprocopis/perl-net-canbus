@@ -38,7 +38,9 @@ It returns 0 on success or 1 on error.
 
 # AUTHOR
 
-Andreas Hadjiprocopis, `<bliako at cpan.org>`
+Perl and XS code by Andreas Hadjiprocopis, `<bliako at cpan.org>`
+
+can-utils code by [https://github.com/linux-can/can-utils](https://github.com/linux-can/can-utils)
 
 # BUGS
 
